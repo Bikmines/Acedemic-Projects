@@ -1,0 +1,258 @@
+/* Name: Bikesh Nath Khanal
+   Student ID : 101985810*/
+   
+body{
+	font-family: sans-serif;
+	background-image: url("styles/images/bg02.png");
+	max-width: 1220px;
+	margin: 0 auto;
+	box-shadow: 5px -6px 5px #f7e394;
+	
+}
+header{
+		margin: 0em;  
+		padding: 1em;  
+		background-color: #F7E394;  
+		text-align: center;
+		font-size:30px ;
+		color: #689E95;
+		font-family: impact;
+		animation-duration: 5s;
+		animation-name: enhancement;
+		animation-iteration-count: 3;
+		}
+		
+
+
+@keyframes enhancement {
+    0%   {background-color:#f7e394 }
+    25%  {background-color:#fff2bd}
+    50%  {background-color:#fff9de}
+    75%  {background-color:#f9f5e3}
+    100% {background-color:#f7e394}
+}
+
+
+		
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+	margin: 0em; 
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #689E95;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-family: impact;
+	border-right: 2px solid #f7e394;
+}
+
+nav ul li a:hover {
+    background-color: green;
+	color:white;
+}
+
+ aside {  
+	 border: 2px solid #fbf0b2;  
+	 border-radius: 14px;  
+	 margin: 1em;  
+	 padding: 1em;  
+	 width: 25%; 
+	 float: right;
+	 box-shadow: 5px -6px 5px #f7e394;
+	 font-style:italic;
+	
+	 
+ } 
+ aside h1{
+
+	 text-decoration:none;
+	 margin:auto;
+	 animation: mymove 5s infinite;
+	 animation-timing-function: ease-in-out;
+	 animation-duration: 5s;
+	 animation-iteration-count: 3;
+ }
+ @keyframes mymove {
+    from {left: 0px;}
+    to {left: 20px;}
+}
+ img{
+	 height:300px;
+	 width:49.25%;
+	 border: 2px solid #fbf0b2;
+	 margin:0.05em;
+	 
+ }
+
+
+p{
+	text-align: justify;	
+}
+
+
+table, thead, td, tr, th {
+    border: 1px solid black;
+	margin:auto;
+}
+
+thead,th{
+	background-color:#fbf0b2;
+}
+
+td{
+	background-color:#689E95;
+}
+
+
+
+#tables, #HyperLinks {  
+ width:49%;   
+ text-align:center; 
+ height:220px;
+ } 
+ 
+ 
+ #tables{
+	border: 2px solid #fbf0b2;
+	float:left;
+	margin:auto;
+}
+ #HyperLinks {
+	 border: 2px solid #fbf0b2;
+	 float:right;
+	 margin:auto;
+	}
+#HyperLinks p{
+    margin: auto;
+    text-align: center;
+    padding: 0.25em;
+}
+
+h1,caption{
+		color: #689E95;
+		font-size:20px;
+		text-decoration: underline;
+		font-family: impact;
+		}
+h2{
+	color: #689E95;
+	font-size:15px;
+	text-decoration: underline;
+	
+}	
+
+#footer p a{
+	text-decoration:none;
+	color: #689E95;
+	text-align:center;
+}
+footer p {
+	text-align: center;
+	padding:0.5em;
+	}  
+	
+#footer{
+	clear:both;
+	background-color: #F7E394;
+	color: #689E95;
+	height:15%;
+}
+/*responsive for medium*/
+@media screen and (max-width: 600px) {
+	
+	nav ul li {
+		width: 33%;
+	}
+	
+	aside{
+		width: 25%;
+		float: right;
+	}
+	
+	aside ol li{
+		font-size: 12px;
+	}
+	
+    #tables{
+		width: 100%;
+		
+	}
+    #HyperLinks {
+		width: 100%;
+		}
+	img{
+		width: 100%;
+	}
+	body{
+		max-width: 600px;
+	}
+	/*for quiz page*/
+	input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px ;
+    border-radius: 4px;
+    resize: vertical;
+    }
+
+	label {
+		padding: 12px 12px 12px 0;
+		display: inline-block;
+	}
+}
+/*responsive for small*/
+@media screen and (max-width: 400px) {
+	
+	nav ul li {
+		width: 50%;
+	}
+	
+	aside{
+		width: 25%;
+		float: right;
+	}
+	
+	aside ol li{
+		font-size: 8px;
+	}
+	
+    #tables{
+		width: 100%;	
+	}
+    #HyperLinks {
+		width: 100%;
+		}
+	img{
+		width: 100%;
+	}
+	body{
+		max-width: 400px;
+	}
+	
+	/*for quiz page*/
+	input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px ;
+    border-radius: 4px;
+    resize: vertical;
+    }
+
+	label {
+		padding: 12px 12px 12px 0;
+		display: inline-block;
+	}
+}

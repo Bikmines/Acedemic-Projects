@@ -1,0 +1,11 @@
+facebook www.facebook.com 235.56.56.5 3400
+wikipedia www.wiki.org 129.23.45.3 3200
+ebay www.ebay.com 144.56.54.5 3000
+gmail www.gmail.com 123.45.32.3 2900
+laptop www.laptop.com 234.56.45.45 2500
+nepal www.nepal.com 34.56.56.7 2300
+yahoo www.yahoo.com 43.45.45.45 2200
+netflix www.netflix.com 123.56.45.5 1900
+youtube www.youtube.com 127.67.87.8 1200
+
+recep www.recep.com 123.4534.4 1200

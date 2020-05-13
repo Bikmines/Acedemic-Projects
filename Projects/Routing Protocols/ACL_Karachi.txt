@@ -1,0 +1,65 @@
+no ip access-list extended ACLVLAN50
+Ip access-list extended ACLVLAN50
+permit icmp 68.80.8.0 0.0.0.15 68.80.5.0 0.0.0.255
+permit icmp 68.80.8.0 0.0.0.15 68.80.2.0 0.0.1.255
+permit icmp 68.80.8.0 0.0.0.15 68.80.0.0 0.0.1.255
+permit icmp 68.80.8.0 0.0.0.15 68.80.8.64 0.0.0.15
+permit icmp 68.80.8.0 0.0.0.15 68.80.8.128 0.0.0.15
+permit icmp 68.80.8.0 0.0.0.15 68.80.8.192 0.0.0.7
+permit icmp 68.80.8.0 0.0.0.15 68.80.8.224 0.0.0.7
+permit tcp 68.80.8.0 0.0.0.15 host 148.20.3.1 eq www
+deny ip any any
+
+interface G0/0/0.50
+ip access-group ACLVLAN50 in
+
+no ip access-list extended ACLVLAN20
+Ip access-list extended ACLVLAN20
+deny ip 68.80.2.0 0.0.1.255 68.80.5.0 0.0.0.255
+permit ip any any
+
+interface G0/0/0.20
+ip access-group ACLVLAN20 in
+
+
+no ip access-list extended ACLVLAN70
+Ip access-list extended ACLVLAN70
+deny ip 68.80.8.128 0.0.0.15 68.80.5.0 0.0.0.255
+deny ip 68.80.8.128 0.0.0.15 68.80.2.0 0.0.1.255
+deny ip 68.80.8.128 0.0.0.15 68.80.0.0 0.0.1.255
+deny ip 68.80.8.128 0.0.0.15 68.80.8.64 0.0.0.15
+deny ip 68.80.8.128 0.0.0.15 68.80.8.0 0.0.0.15
+deny ip 68.80.8.128 0.0.0.15 68.80.8.192 0.0.0.7
+deny ip 68.80.8.128 0.0.0.15 68.80.8.224 0.0.0.7
+permit ip any any
+
+interface G0/0/0.70
+ip access-group ACLVLAN70 in
+
+
+no ip access-list standard DENYTECH
+Ip access-list standard DENYTECH
+deny 68.80.5.0 0.0.0.255
+deny 68.80.2.0 0.0.1.255
+deny 68.80.0.0 0.0.1.255
+deny 68.80.8.64 0.0.0.15
+deny 68.80.8.0 0.0.0.15
+deny 68.80.8.192 0.0.0.7
+deny 68.80.8.224 0.0.0.7
+deny 68.80.8.128 0.0.0.15
+permit any 
+
+interface G0/0/0.60
+ip access-group DENYTECH out
+
+
+
+
+
+
+
+
+
+
+
+

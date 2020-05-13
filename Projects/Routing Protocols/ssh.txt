@@ -1,0 +1,12 @@
+username case_study privilege 15 secret cisco
+ip domain-name case.study
+crypto key generate rsa
+
+
+
+
+line vty 0 15
+transport input ssh
+login local
+end
+
